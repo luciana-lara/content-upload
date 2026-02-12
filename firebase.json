@@ -1,0 +1,35 @@
+{
+  "functions": {
+    "source": "functions",
+    "runtime": "nodejs22"
+  },
+  "hosting": {
+    "public": "public",
+    "rewrites": [
+      {
+        "source": "/privacy-policy",
+        "function": "privacyPolicy"
+      },
+      {
+        "source": "/terms-of-service",
+        "function": "termsOfService"
+      },
+      {
+        "source": "/auth",
+        "function": "tiktokAuth"
+      },
+      {
+        "source": "/auth/callback",
+        "function": "tiktokCallback"
+      },
+      {
+        "source": "/api/**",
+        "function": "api"
+      },
+      {
+        "source": "**",
+        "function": "serveMedia"
+      }
+    ]
+  }
+}
